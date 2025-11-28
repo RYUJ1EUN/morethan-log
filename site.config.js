@@ -7,7 +7,7 @@ const CONFIG = {
     bio: "I wish for a life full of books, exhibitions and jazz.",
     email: "j.ryu.jieun@gmail.com",
     linkedin: "",
-    github: "",
+    github: "https://github.com/morethanmin/morethan-log",
     instagram: "",
   },
   projects: [
