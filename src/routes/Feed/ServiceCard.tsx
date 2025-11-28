@@ -15,7 +15,6 @@ const ServiceCard: React.FC = () => {
         {CONFIG.projects.map((project, idx) => (
           <a
             key={idx}
-            href={}
             rel="noreferrer"
             target="_blank"
           >
