@@ -6,9 +6,9 @@ const CONFIG = {
     role: "Ph.D. student", // frontend developer",
     bio: "I wish for a life full of books, exhibitions and jazz.",
     email: "j.ryu.jieun@gmail.com",
-    linkedin: "",
-    github: "",
-    instagram: "",
+//    linkedin: "",
+//    github: "",
+//    instagram: "",
   },
   projects: [
     {
