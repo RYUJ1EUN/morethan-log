@@ -15,7 +15,7 @@ const ServiceCard: React.FC = () => {
         {CONFIG.projects.map((project, idx) => (
           <a
             key={idx}
-            href={`${project.href}`}
+            href={`${project.href || '#'}`}
             rel="noreferrer"
             target="_blank"
           >
