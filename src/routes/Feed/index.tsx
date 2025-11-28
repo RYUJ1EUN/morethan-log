@@ -49,7 +49,7 @@ const Feed: React.FC<Props> = () => {
         }}
       >
         <ProfileCard />
-        <ServiceCard />
+        {/* <ServiceCard />  <-- 이렇게 감싸서 안 보이게 만듭니다 */}
         <ContactCard />
         <div className="footer">
           <Footer />
@@ -136,3 +136,4 @@ const StyledWrapper = styled.div`
     }
   }
 `
+
