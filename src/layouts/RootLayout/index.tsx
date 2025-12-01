@@ -39,6 +39,9 @@ import 'prismjs/components/prism-swift.js'
 import 'prismjs/components/prism-wasm.js'
 import 'prismjs/components/prism-yaml.js'
 import "prismjs/components/prism-go.js"
+// [추가 1] 방금 만든 컴포넌트를 불러옵니다.
+import ScrollProgressBar from "src/components/ScrollProgressBar"
+
 
 type Props = {
   children: ReactNode
@@ -53,6 +56,10 @@ const RootLayout = ({ children }: Props) => {
 
   return (
     <ThemeProvider scheme={scheme}>
+      {/* [추가 2] 가장 윗부분(ThemeProvider 바로 아래)에 넣어줍니다. */}
+      <ScrollProgressBar />
+
+      {/* 기존 코드들 */}
       <Scripts />
       {/* // TODO: replace react query */}
       {/* {metaConfig.type !== "Paper" && <Header />} */}
