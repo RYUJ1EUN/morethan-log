@@ -38,6 +38,13 @@ class MyDocument extends Document {
           )}
         </Head>
         <body>
+          // 1. 우클릭 메뉴 금지
+          onContextMenu={(e) => e.preventDefault()}
+          // 2. 텍스트 드래그(선택) 금지
+          onSelectStart={(e) => e.preventDefault()}
+          // 3. 이미지/글자 끌어가기 금지
+          onDragStart={(e) => e.preventDefault()}
+        > //여기까지 추가
           <Main />
           <NextScript />
         </body>
