@@ -9,22 +9,7 @@ export const Global = () => {
   return (
     <_Global
       styles={css`
-      /* [추가 1] 노션 전용 클래스 강제 잠금 (여기가 핵심입니다!) */
-        .notion, 
-        .notion-app, 
-        .notion-viewport, 
-        .notion-page-content, 
-        .notion-text, 
-        .notion-code,
-        .notion-image {
-          -webkit-user-select: none !important;
-          -moz-user-select: none !important;
-          -ms-user-select: none !important;
-          user-select: none !important;
-          -webkit-user-drag: none !important;
-          cursor: default !important;
-        }
-
+        /* [추가 1] 노션 전용 클래스 강제 잠금 (여기가 핵심입니다!) */
         * {
           -webkit-user-select: none !important;
           -moz-user-select: none !important;
@@ -35,7 +20,6 @@ export const Global = () => {
 
         /* [추가 2] 이미지 불법 복제 강력 차단 */
         img {
-          -webkit-user-drag: none !important;
           pointer-events: none !important; /* 우클릭 메뉴조차 안 뜨게 만듦 */
         }
 
