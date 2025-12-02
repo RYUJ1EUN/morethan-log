@@ -36,14 +36,30 @@ class MyDocument extends Document {
               />
             </>
           )}
+          {/* [강력 차단 1] CSS로 드래그/선택 원천 봉쇄 */}
+          <style>{`
+            html, body, #__next {
+              -webkit-user-select: none !important;
+              -moz-user-select: none !important;
+              -ms-user-select: none !important;
+              user-select: none !important;
+              -webkit-user-drag: none !important;
+            }
+            /* 입력창은 풀어줌 */
+            input, textarea {
+              -webkit-user-select: text !important;
+              -moz-user-select: text !important;
+              -ms-user-select: text !important;
+              user-select: text !important;
+            }
+          `}</style>
         </Head>
         <body>
-          // 1. 우클릭 메뉴 금지
-          onContextMenu={(e) => e.preventDefault()}
-          // 2. 텍스트 드래그(선택) 금지
-          onSelectStart={(e) => e.preventDefault()}
-          // 3. 이미지/글자 끌어가기 금지
-          onDragStart={(e) => e.preventDefault()}
+          {/* [강력 차단 2] 자바스크립트로 우클릭/드래그 이벤트 삭제 */}
+          onContextMenu={(e) => { e.preventDefault(); return false; }}
+          onDragStart={(e) => { e.preventDefault(); return false; }}
+          onSelectStart={(e) => { e.preventDefault(); return false; }}
+          style={{ userSelect: "none", WebkitUserSelect: "none" }} // 인라인 스타일로 한 번 더 잠금
         > //여기까지 추가
           <Main />
           <NextScript />
