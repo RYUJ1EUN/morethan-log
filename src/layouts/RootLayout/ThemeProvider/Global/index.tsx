@@ -22,28 +22,7 @@ export const Global = () => {
         * {
           color-scheme: ${theme.scheme};
           box-sizing: border-box;
-          
-          /* [추가 1] 텍스트 선택 및 드래그 방지 */
-          -webkit-user-select: none !important;
-          -moz-user-select: none !important;
-          -ms-user-select: none !important;
-          user-select: none !important;
-          -webkit-user-drag: none !important; /* 이미지 끌기 방지 */
         }
-
-        /* [추가 2] 이미지 불법 복제 강력 차단 */
-        img {
-          pointer-events: none !important; /* 우클릭 메뉴조차 안 뜨게 만듦 */
-        }
-
-        /* [추가 3] 예외처리 (입력창은 풀어주기, 안 그러면 검색 못함) */
-        input, textarea {
-          -webkit-user-select: text !important;
-          -moz-user-select: text !important;
-          -ms-user-select: text !important;
-          user-select: text !important;
-          cursor: auto !important;
-        }        
 
         h1,
         h2,
