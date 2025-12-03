@@ -17,6 +17,12 @@ export const Global = () => {
           font-family: ${pretendard.style.fontFamily};
           font-weight: ${pretendard.style.fontWeight};
           font-style: ${pretendard.style.fontStyle};
+
+          /* [추가된 부분] 드래그 방지 코드 4줄 */
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
         }
 
         * {
