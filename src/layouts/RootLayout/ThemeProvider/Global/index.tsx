@@ -15,7 +15,7 @@ export const Global = () => {
           -moz-user-select: none !important;
           -ms-user-select: none !important;
           user-select: none !important;
-          -webkit-user-drag: none !important; /* 이미지 끌기 방지 */
+          -webkit-user-drag: none !important; /* 이미지 드래그 방지 */
         }
 
         /* 입력창과 텍스트 박스는 글씨를 써야 하니까 풀어줍니다 */
